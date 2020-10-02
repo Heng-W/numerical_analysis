@@ -9,4 +9,8 @@
 - 线性方程组求解：SOR迭代法(sor.c)、列主元高斯消元法(gauss_elim_piv.c)、平方根法(sqrt_method.c)
 - 非线性方程组求解：牛顿迭代法（newton_iters.c）
 
-Windows平台利用MinGW安装gcc编译器后运行compile.bat，Linux平台运行compile.sh，可批量生成所有可执行文件。
+
+### 生成所有可执行文件：
+
+-Windows平台安装gcc编译器后，双击compile.bat或输入make -f Makefile.win.mk
+-Linux平台直接make

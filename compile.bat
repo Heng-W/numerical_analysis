@@ -2,10 +2,14 @@
 setlocal enabledelayedexpansion
 set compile_cnt=0
 set build_cnt=0
-del build\windows\*.exe
+IF EXIST build (
+    del build\*.exe
+) else (
+    md build
+)
 for %%i in (*.c) do (
 	set source=%%i
-	set target=build\windows\!source:~0,-2!.exe
+	set target=build\!source:~0,-2!.exe
 	set /a compile_cnt+=1
 	echo No.!compile_cnt! compile !source!
 	gcc -std=c99 -fexec-charset=gbk !source! -o !target!
