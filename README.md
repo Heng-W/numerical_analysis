@@ -10,7 +10,7 @@
 - 非线性方程组求解：牛顿迭代法（newton_iters.c）
 
 
-### 生成所有可执行文件：
+### 生成所有可执行文件
 
--Windows平台安装gcc编译器后，双击compile.bat或输入make -f Makefile.win.mk
--Linux平台直接make
+- Windows平台安装gcc编译器后，双击compile.bat或输入make -f Makefile.win.mk
+- Linux平台直接输入make
