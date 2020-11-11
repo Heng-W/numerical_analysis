@@ -1,6 +1,7 @@
 
 CC=gcc
-CFLAGS= -std=c99 -lm -Wall -O2 -fexec-charset=gbk
+CFLAGS= -std=c99 -Wall -O2 -fexec-charset=gbk
+LINKFLAGS:= -lm
 
 TARGET_DIR:=build
 SRCS:=$(wildcard *.c)
@@ -16,7 +17,7 @@ $(TARGET_DIR):
 
 $(TARGET_DIR)/%.exe: %.c
 	@echo compile $^
-	$(CC) $(CFLAGS) $^ -o $@ 
+	$(CC) $(CFLAGS) $^ -o $@ $(LINKFLAGS)
 	@echo
 
 clean:
